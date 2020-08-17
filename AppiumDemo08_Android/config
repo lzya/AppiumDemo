@@ -1,0 +1,24 @@
+        ## Vivo
+        desired_caps = {'platformName': 'Android',
+                        'platformVersion': '7.1.2',
+                        'deviceName': 'f9b1d84b',
+                        'appPackage': 'com.xueqiu.android',
+                        'appActivity': '.view.WelcomeActivityAlias',
+                        'automationName': 'UiAutomator2',
+                        'autoGrantPermissions': True,  # 解决权限问题
+                        'unicodeKeyboard': True  # 使用Unicode编码方式发送字符串
+                        # 'resetKeyboard': True  # 隐藏键盘
+                        # 以上2行增加后不能成功启动APP，反而每次运行程序都会自动启动需要安装Appium Android Input Manager for
+                        }
+
+                desired_caps = {'platformName': 'Android',
+                        'platformVersion': '8.0.0',
+                        'deviceName': 'APU0216720000191',
+                        'appPackage': 'com.xueqiu.android',
+                        'appActivity': '.view.WelcomeActivityAlias',
+                        'automationName': 'UiAutomator2',
+                        'autoGrantPermissions': True,  # 解决权限问题
+                        'unicodeKeyboard': True  # 使用Unicode编码方式发送字符串
+                        # 'resetKeyboard': True  # 隐藏键盘
+                        # 以上2行增加后不能成功启动APP，反而每次运行程序都会自动启动需要安装Appium Android Input Manager for
+                        }
