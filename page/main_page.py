@@ -1,5 +1,4 @@
 from time import sleep
-
 from selenium.webdriver.common.by import By
 
 from page.base_page import BasePage
@@ -26,4 +25,5 @@ class MainPage(BasePage):
         self.find_element(self._academic_circle_search).click()  # [dxy]
 
         return SearchPage(self.driver)
+        # return self
 
