@@ -1,0 +1,40 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+          <option value="E302" />
+          <option value="E301" />
+          <option value="E127" />
+          <option value="E303" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="list" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="selenium.webdriver.remote.webdriver.WebDriver.tap" />
+          <option value="selenium.webdriver.remote.webdriver.Remote" />
+          <option value="page.app.webdriver" />
+          <option value="page.base_page.BasePage.find_element_by" />
+          <option value="testcase.test_dxy_demo.TestDemo.NoviceSpreePage" />
+          <option value="testcase.test_dxy_demo.TestDemo.search_page" />
+          <option value="page.app.App.to_search" />
+          <option value="testcase.test_dxy_demo.TestDemo.driver" />
+          <option value="testcase.test_dxy_demo.assertEqual" />
+          <option value="testcase.test_dxy_demo.TestDemo.assert_Equal" />
+          <option value="testcase.test_dxy_demo.TestDemo.assertEqual" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
