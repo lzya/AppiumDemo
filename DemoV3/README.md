@@ -2,4 +2,4 @@
 appiumDemo
 
 
-# 目前调用继承异常
+# 目前调用pass
