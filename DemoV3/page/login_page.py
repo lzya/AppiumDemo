@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
 
 from page.base_page import BasePage
-from page.mine_page import MinePage
-
 
 class LoginPage(BasePage):
 
@@ -16,13 +14,9 @@ class LoginPage(BasePage):
         self.find_element(self._sso_username).send_keys("18500239087")
         self.find_element(self._sso_password).send_keys("dxy123456")
         self.find_element(self._sso_login).click()
+        from page.mine_page import MinePage
         return MinePage(self.driver)
 
     def signout(self):
 
         pass
-
-
-
-
-

@@ -7,6 +7,7 @@ class TestDemo:
         self.mainpage = App.start().select_user_interest_area().close()
         print("%s对象拿到driver" % self.mainpage)
         # return self.mainpage.to_search()
+        # return self
 
     def test_dxy_login(self):
         """
@@ -14,13 +15,13 @@ class TestDemo:
         :return:
         """
         sleep(3)
-        # aa = self.mainpage.to_search().dxy_search("amxl")  # 进入主搜索页,输入搜索内容
         print("进入登录页")
         aa = self.mainpage.to_mine().login()
-        aa.username_password_login()
+        dd = aa.username_password_login().quit_mine()
+        dd.to_academic_circle_write()  # 进入学术圈发帖页
+        # 点击学术圈发帖
+
         print("登录成功")
-
-
 
 
     def teardown(self):

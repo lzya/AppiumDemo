@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from page.base_page import BasePage
 from page.mine_page import MinePage
+from page.post_publish_center_title_page import PostPublishCenter
 from page.search_page import SearchPage
 
 
@@ -56,8 +57,13 @@ class MainPage(BasePage):
         return SearchPage(self.driver)
         # return self
 
-
+    _to_mine = (By.ID, "main_mine_rb")
     def to_mine(self):
-        _to_mine = (By.ID, "main_mine_rb")
         self.find_element(self._to_mine).click()
         return MinePage(self.driver)
+
+    _academic_circle_write = (By.ID, "academic_circle_write")
+    def to_academic_circle_write(self):
+        self.find_element(self._academic_circle_write).click()
+        # post_publish_center_title
+        return PostPublishCenter(self.driver)
