@@ -13,6 +13,10 @@ class App:
     driver: WebDriver
     @classmethod
     def start(cls):
+        """
+        变更设备连接，需要修改配置信息
+        :return:
+        """
         desired_caps = {'platformName': 'Android',
                         'platformVersion': '8.0.0',
                         'deviceName': 'APU0216720000191',

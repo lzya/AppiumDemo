@@ -37,3 +37,5 @@ class SearchPage(BasePage):
         elif keyword == "gaoxueya":
             dd = self.driver.find_element_by_id("tv_accurate_disease_name").text
         return dd
+
+

@@ -1,0 +1,6 @@
+('xpath', "//*[@text='同意']")
+('xpath', "//*[@text='神经']")
+('xpath', "//*[@text='开始使用']")
+('id', 'iv_close')
+<page.main_page.MainPage object at 0x0420D230>对象拿到driver
+('id', 'academic_circle_search')

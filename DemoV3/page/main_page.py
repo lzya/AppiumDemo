@@ -1,20 +1,45 @@
 from time import sleep
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 from page.base_page import BasePage
+from page.mine_page import MinePage
 from page.search_page import SearchPage
 
 
 class MainPage(BasePage):
 
+    _iv_close_upgrade = (By.ID, "iv_close")
+    def close_upgrade(self):
+        """
+        处理升级弹框
+        :return: self
+        """
+        for i in range(2):
+            try:
+                self.find_element(self._iv_close_upgrade).click()
+                WebDriverWait(self.driver, 1, 0.5).until(expected_conditions.
+                                                         presence_of_element_located(self._iv_close_upgrade)).click()
+            except:
+                pass
+        return self
+
 
     _iv_close = (By.ID, "iv_close")
     def close(self):
         """
-        关闭首页广告弹框
+        关闭首页广告弹框 & 升级弹框
         :return:
         """
-        self.find_element(self._iv_close).click()
+        # self.find_element(self._iv_close).click()
+        for i in range(2):
+            try:
+                # self.find_element(self._iv_close_upgrade).click()
+                WebDriverWait(self.driver, 1, 0.5).until(expected_conditions.
+                                                         presence_of_element_located(self._iv_close)).click()
+            except:
+                pass
         return self
 
     _academic_circle_search = (By.ID, "academic_circle_search")
@@ -32,3 +57,7 @@ class MainPage(BasePage):
         # return self
 
 
+    def to_mine(self):
+        _to_mine = (By.ID, "main_mine_rb")
+        self.find_element(self._to_mine).click()
+        return MinePage(self.driver)
